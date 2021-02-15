@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import java.io.BufferedReader;  
+import java.io.FileReader;  
+import java.io.IOException;  
+import java.io.*;
 
 
 public class Palindro {
@@ -77,9 +81,30 @@ public class Palindro {
     }
 
     public static void main(String[] arg) {
-        System.out.println("Ingrese una cadena de texto: ");
-        texto = teclado.nextLine().toCharArray();
+        /*
+        try  {  
+        //parsing a CSV file into BufferedReader class constructor  
+            BufferedReader br = new BufferedReader(new FileReader("palabras.csv"));
+            System.out.prinln(br.readLine().toString());  
+            texto = br.readLine().toCharArray(); 
 
+        
+        while ((line = br.readLine()) != null)   //returns a Boolean value  
+            {  
+            String[] employee = line.split(splitBy);    // use comma as separator  
+                System.out.println("Employee [First Name=" + employee[0] + ", Last Name=" + employee[1] + ", Designation=" + employee[2] + ", Contact=" + employee[3] + ", Salary= " + employee[4] + ", City= " + employee[5] +"]");  
+            }
+        
+        }   
+        catch (IOException e){  
+            e.printStackTrace();  
+        } 
+        */
+
+        System.out.println("Escriba un cadena de texto: "); 
+        texto = teclado.nextLine().toCharArray();
+        
         execute(texto);
     }
 }
+
